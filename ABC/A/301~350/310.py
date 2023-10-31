@@ -1,0 +1,5 @@
+n,p,q=map(int,input().split())
+d=list(map(int,input().split()))
+j=min(d)
+ans=min(p,q+j)
+print(ans)
