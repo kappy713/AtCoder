@@ -1,5 +1,0 @@
-def 
-
-
-n=int(input())
-
