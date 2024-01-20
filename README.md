@@ -1,4 +1,4 @@
-# AtCoder Beginner Contestの回答です
+# AtCoder Beginner Contestの解答です
 
 ### 使用言語はPython
 
