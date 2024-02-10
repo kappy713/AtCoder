@@ -1,9 +1,13 @@
-M,D=map(int,input().split())
-y,m,d=map(int,input().split())
+from bisect import bisect
+n=int(input())
+a=list(map(int,input().split()))
 
-if M==m and D==d:
-    print(f"{y+1} 1 1")
-elif D==d:
-    print(f"{y} {m+1} 1")
-else:
-    print(f"{y} {m} {d+1}")
+A=sorted(a)
+a_sum=[A[0]]*n
+for i in range(1,n):
+    a_sum[i]=a_sum[i-1]+A[i]
+
+for i in range(n):
+    index=bisect(A,a[i])
+    print(a_sum[-1]-a_sum[index-1],end=" ")
+# 累積和&二分探索
