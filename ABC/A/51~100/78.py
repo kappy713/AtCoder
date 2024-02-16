@@ -1,0 +1,5 @@
+x,y=input().split()
+X,Y=ord(x),ord(y)
+if X==Y:print("=")
+elif X>Y:print(">")
+else:print("<")
