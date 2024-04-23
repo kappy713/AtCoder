@@ -1,7 +1,6 @@
 w, a, b = map(int, input().split())
 
-check = b - (a + w)
-if check <= 0:
-    print(abs(check + a))
+if abs(a - b) <= w:
+    print(0)
 else:
-    print(check)
+    print(abs(a - b) - w)
