@@ -1,25 +1,15 @@
 n,d=map(int,input().split())
-s=[]
-for _ in range(n):
-    s.append(input())
+s =[input() for _ in range(n)]
 
-count=0
-ans=[0]
-flag=False
+ans,count = 0,0
 for j in range(d):
-    if s[0][j]=="o":
-        flag=True
-        for i in range(n):
-            if s[i][j]!="o":
-                flag=False
-                ans.append(count)
-                count=0
-                break
-        if flag:
-            count+=1
-    else:
-        flag=False
-        ans.append(count)
-        count=0 
-ans.append(count)   
-print(max(ans))
+    flag = True
+    for i in range(n):
+        if s[i][j] == "x":
+            flag = False
+            count = 0
+            break
+    if flag:
+        count += 1
+    ans = max(ans, count)
+print(ans)
